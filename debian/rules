@@ -1,0 +1,32 @@
+#!/usr/bin/make -f
+
+# see FEATURE AREAS in dpkg-buildflags(1)
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all reproducible=-fixfilepath
+
+
+# see ENVIRONMENT in dpkg-buildflags(1)
+# package maintainers to append CFLAGS
+#export DEB_CFLAGS_MAINT_APPEND  = -Wall -pedantic
+# package maintainers to append LDFLAGS
+export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
+
+TESTS_ROOT=$(CURDIR)/debian/tests.root
+
+%:
+	dh $@ --with kf5
+
+override_dh_auto_test:
+ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
+	mkdir -p "$(TESTS_ROOT)"
+	mkdir -p "$(TESTS_ROOT)/tmp"
+	mkdir -p "$(TESTS_ROOT)/home/tests"
+	mkdir -p -m 700 "$(TESTS_ROOT)/run"
+	xvfb-run -a --server-args="-screen 0 1024x768x24+32" dh_auto_test --no-parallel -- HOME="$(TESTS_ROOT)/home/tests" TMPDIR="$(TESTS_ROOT)/tmp" XDG_RUNTIME_DIR="$(TESTS_ROOT)/run"
+endif
+
+execute_after_dh_auto_install:
+	# remove the development symlinks
+	find debian/keditbookmarks -name '*.so' -type l -delete
+
+execute_after_dh_auto_clean:
+	rm -rf "$(TESTS_ROOT)"

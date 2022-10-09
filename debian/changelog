@@ -1,0 +1,183 @@
+keditbookmarks (21.08.0-1) unstable; urgency=medium
+
+  [ Norbert Preining ]
+  * New upstream release (21.08.0).
+
+ -- Norbert Preining <norbert@preining.info>  Mon, 16 Aug 2021 16:11:17 +0900
+
+keditbookmarks (21.04.0-1) experimental; urgency=medium
+
+  [ Norbert Preining ]
+  * New upstream release (21.04.0).
+  * Borrow minimal upstream signing key from k3b.
+  * Drop Kubuntu from maintainer name.
+  * Added myself to the uploaders.
+
+ -- Norbert Preining <norbert@preining.info>  Tue, 27 Apr 2021 23:33:37 +0900
+
+keditbookmarks (20.12.0-2) unstable; urgency=medium
+
+  [ Vagrant Cascadian ]
+  * Disable fixfilepath reproducibility feature, as it triggers build failures
+    when enabled. (Closes: #972300)
+
+ -- Aurélien COUDERC <coucouf@debian.org>  Mon, 11 Jan 2021 17:26:33 +0100
+
+keditbookmarks (20.12.0-1) unstable; urgency=medium
+
+  * New upstream release (20.12.0).
+  * Update build dependencies according to upstream build system:
+    - Qt >= 5.12
+    - KF5 >= 5.71
+  * Refresh copyright information.
+  * Bump Standards-Version to 4.5.1, no change required.
+  * Bump debhelper compatibility level to 13.
+  * Refresh upstream metadata.
+  * Update project homepage.
+  * Remove Modestas Vainius, George Kiagiadakis, Eshat Cakar, Maximiliano
+    Curia from the uploaders, thanks for your work on the package!
+  * Add myself to the uploaders.
+
+ -- Aurélien COUDERC <coucouf@debian.org>  Sun, 20 Dec 2020 16:03:34 +0100
+
+keditbookmarks (20.04.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Explicitly add the gettext build dependency.
+
+ -- Pino Toscano <pino@debian.org>  Sat, 02 May 2020 17:02:00 +0200
+
+keditbookmarks (19.12.2-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Sandro Knauß ]
+  * New upstream release (18.04.1).
+  * Update Vcs links to salsa.
+  * Bump Standards-Version to 4.1.4 (No changes needed).
+  * Bump debhelper build-dep and compat to 11.
+  * Update copyright file for new upstream.
+
+  [ Aurélien COUDERC ]
+  * Switch debian/watch to new KDE release service URL.
+  * Borrow minimal upstream signing key from k3b.
+  * New upstream release (19.12.2).
+  * Update build dependencies according to upstream build system:
+    - cmake >= 3.0
+  * Switch to debhelper-compat build dependency, bump compatibility level to
+    12.
+  * Drop breaks / replaces not needed anymore after 2 stable releases.
+  * Switch from dhmk to dh --with kf5.
+  * Add hardening=+all build hardening flag.
+  * Reactivate build-time tests.
+  * Improve short and long descriptions.
+  * Bump Standards-Version to 4.5.0:
+    - Add Rules-Requires-Root: no.
+
+ -- Aurélien COUDERC <coucouf@debian.org>  Mon, 24 Feb 2020 09:02:36 +0100
+
+keditbookmarks (17.08.3-2) unstable; urgency=medium
+
+  * Team upload.
+  * Upload to unstable.
+  * Bump Standards-Version to 4.1.3, no changes required.
+  * Update the kde-baseapps-bin breaks/replaces, for the removal of
+    keditbookmarks in src:kde-baseapps.
+  * Adjust l10npkgs_firstversion_ok to the version where kde-l10n will
+    drop translations.
+
+ -- Pino Toscano <pino@debian.org>  Wed, 03 Jan 2018 12:23:38 +0100
+
+keditbookmarks (17.08.3-1) experimental; urgency=medium
+
+  * Team upload.
+
+  [ Maximiliano Curia ]
+  * New upstream release (17.08.1)
+  * Bump Standards-Version to 4.1.0.
+  * Update upstream metadata
+  * Update build-deps and deps with the info from cmake
+  * Disable auto tests at build time
+  * Add missing breaks/replaces against konqueror
+  * Update uploaders list as requested by MIA team
+
+  [ Pino Toscano ]
+  * New upstream release.
+  * Simplify watch file, and switch it to https.
+  * Bump Standards-Version to 4.1.2, no changes required.
+  * Remove unused build dependencies: kded5-dev, libkf5activities-dev,
+    libkf5archive-dev, libkf5crash-dev, libkf5dbusaddons-dev,
+    libkf5kcmutils-dev, libkf5kdelibs4support-dev, libkf5khtml-dev,
+    libqt5x11extras5-dev, libx11-dev, pkg-config, and qtwebengine5-dev.
+  * Do not ship the development symlinks.
+  * Update lintian overrides.
+  * Update copyright.
+
+ -- Pino Toscano <pino@debian.org>  Mon, 25 Dec 2017 11:29:41 +0100
+
+keditbookmarks (17.08.1-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 05 Sep 2017 13:59:44 +0000
+
+keditbookmarks (17.08.0-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Thu, 17 Aug 2017 09:35:28 +0000
+
+keditbookmarks (17.04.3-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Wed, 12 Jul 2017 10:20:18 +0000
+
+keditbookmarks (17.04.2-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Wed, 07 Jun 2017 12:21:28 +0000
+
+keditbookmarks (17.04.1-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Thu, 11 May 2017 18:15:30 +0000
+
+keditbookmarks (17.04.0-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Wed, 19 Apr 2017 13:04:02 +0000
+
+keditbookmarks (16.12.3-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Wed, 08 Mar 2017 13:48:16 +0000
+
+keditbookmarks (16.12.2-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Wed, 08 Feb 2017 16:58:12 +0000
+
+keditbookmarks (16.12.1-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Wed, 11 Jan 2017 13:18:08 +0000
+
+keditbookmarks (16.12.0-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Wed, 14 Dec 2016 16:26:45 +0000
+
+keditbookmarks (16.08.3-0neon) xenial; urgency=medium
+
+  * Initial release.
+
+ -- Raymond Wooninck <tittiatcoke@gmail.com>  Mon, 07 Nov 2016 18:50:18 +0100

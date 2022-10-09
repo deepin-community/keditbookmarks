@@ -1,0 +1,39 @@
+Source: keditbookmarks
+Section: kde
+Priority: optional
+Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Uploaders: Aurélien COUDERC <coucouf@debian.org>,
+           Norbert Preining <norbert@preining.info>,
+           Sune Vuorela <sune@debian.org>,
+Build-Depends: cmake (>= 3.16~),
+               debhelper-compat (= 13),
+               extra-cmake-modules (>= 5.83.0~),
+               gettext,
+               libkf5bookmarks-dev (>= 5.83.0~),
+               libkf5coreaddons-dev (>= 5.83.0~),
+               libkf5doctools-dev (>= 5.83.0~),
+               libkf5i18n-dev (>= 5.83.0~),
+               libkf5iconthemes-dev (>= 5.83.0~),
+               libkf5kio-dev (>= 5.83.0~),
+               libkf5parts-dev (>= 5.83.0~),
+               libkf5windowsystem-dev (>= 5.83.0~),
+               pkg-kde-tools (>= 0.12),
+               qtbase5-dev (>= 5.15.0~),
+               xauth <!nocheck>,
+               xvfb <!nocheck>,
+Standards-Version: 4.5.1
+Homepage: https://invent.kde.org/utilities/keditbookmarks
+Vcs-Browser: https://salsa.debian.org/qt-kde-team/kde/keditbookmarks
+Vcs-Git: https://salsa.debian.org/qt-kde-team/kde/keditbookmarks.git
+Rules-Requires-Root: no
+
+Package: keditbookmarks
+Section: utils
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: bookmarks editor utility for KDE
+ The editor shows a tree view of your KDE bookmarks and bookmark subfolders.
+ .
+ Several applications in the KDE suite let you create bookmarks (e.g.
+ Konqueror, Konsole, Konversation) and will launch this bookmark editor from
+ their Bookmarks -> Edit Bookmarks menu item.
